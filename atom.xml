@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Token.gothub.io</id>
+    <id>https://Token.github.io</id>
     <title>tang1201blog</title>
-    <updated>2020-04-28T09:28:15.224Z</updated>
+    <updated>2020-04-28T09:29:46.921Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://Token.gothub.io"/>
-    <link rel="self" href="https://Token.gothub.io/atom.xml"/>
+    <link rel="alternate" href="https://Token.github.io"/>
+    <link rel="self" href="https://Token.github.io/atom.xml"/>
     <subtitle>分享也是一种学习</subtitle>
-    <logo>https://Token.gothub.io/images/avatar.png</logo>
-    <icon>https://Token.gothub.io/favicon.ico</icon>
+    <logo>https://Token.github.io/images/avatar.png</logo>
+    <icon>https://Token.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, tang1201blog</rights>
     <entry>
         <title type="html"><![CDATA[# **python语法**]]></title>
-        <id>https://Token.gothub.io/post/python-yu-fa/</id>
-        <link href="https://Token.gothub.io/post/python-yu-fa/">
+        <id>https://Token.github.io/post/python-yu-fa/</id>
+        <link href="https://Token.github.io/post/python-yu-fa/">
         </link>
         <updated>2020-04-28T08:18:53.000Z</updated>
         <content type="html"><![CDATA[<h2 id="1变量以及数据类型"><strong>1.变量以及数据类型</strong></h2>
@@ -762,8 +762,8 @@ print(names2)
     </entry>
     <entry>
         <title type="html"><![CDATA[C语言大纲]]></title>
-        <id>https://Token.gothub.io/post/c-yu-yan-da-gang/</id>
-        <link href="https://Token.gothub.io/post/c-yu-yan-da-gang/">
+        <id>https://Token.github.io/post/c-yu-yan-da-gang/</id>
+        <link href="https://Token.github.io/post/c-yu-yan-da-gang/">
         </link>
         <updated>2020-04-28T02:32:47.000Z</updated>
         <content type="html"><![CDATA[<h1 id="c语言概述">C语言概述</h1>
@@ -1701,8 +1701,8 @@ pow(x,y)//x的y次幂</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://Token.gothub.io/post/hello-gridea/</id>
-        <link href="https://Token.gothub.io/post/hello-gridea/">
+        <id>https://Token.github.io/post/hello-gridea/</id>
+        <link href="https://Token.github.io/post/hello-gridea/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
