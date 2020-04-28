@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title># **python语法** | tang1201blog</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://https://github.com/tang1201/Token.gothub.io.git/favicon.ico?v=1588065979755">
+<link rel="stylesheet" href="https://https://github.com/tang1201/Token.gothub.io.git/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1.变量以及数据类型
+数据类型
+Numbers 数字：
+int（有符号整型）long（长整型[也可以表示八进制和十六进制]，python3里已经废弃了）float（浮点型） complex（复数）
+布尔类型 bool ：    Ture  ..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://https://github.com/tang1201/Token.gothub.io.git">
+        <img src="https://https://github.com/tang1201/Token.gothub.io.git/images/avatar.png?v=1588065979755" class="site-logo">
+        <h1 class="site-title">tang1201blog</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      分享也是一种学习
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://https://github.com/tang1201/Token.gothub.io.git/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title"># **python语法**</h2>
+            <div class="post-date">2020-04-28</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="1变量以及数据类型"><strong>1.变量以及数据类型</strong></h2>
+<h3 id="数据类型">数据类型</h3>
+<p>Numbers 数字：</p>
+<p>int（有符号整型）long（长整型[也可以表示八进制和十六进制]，python3里已经废弃了）float（浮点型） complex（复数）</p>
+<p>布尔类型 bool ：    Ture          False</p>
+<p>String（字符串）</p>
+<p>空值	None</p>
+<p>List（列表）——&gt;shuzu----[]</p>
+<p>Tuple（元祖）——&gt;()</p>
+<p>Dictionary（字典）——&gt;{}</p>
+<p>集合类型</p>
+<h3 id="进制转换"><em>进制转换：</em></h3>
+<p>使用代码进行进制转换：详见下列代码</p>
+<pre><code class="language-python">a = 12
+print(bin(a))  #0b1100
+print(oct(a))  #0o14
+print(hex(a))  #0xc
+</code></pre>
+<p>使用bin内置函数可以将数字转换成二进制</p>
+<p>使用oct内置函数可以将数字转换成八进制</p>
+<p>使用hex内置函数可以将数字转换成十六进制</p>
+<p>在python里，变量是没有数据类型的，我们所说变量的数据类型，其实是变量对应的值的数据类型，不需要定义变量，直接是动态的，会随时修改的</p>
+<h3 id="标识符关键字"><strong>标识符关键字</strong></h3>
+<h4 id="标识符"><strong>标识符：</strong></h4>
+<p>变量，模块名，函数名，类名</p>
+<h4 id="标识符的命名规则"><strong>标识符的命名规则：</strong></h4>
+<ol>
+<li>
+<p>由数字、字母和_下划线组成，不能以数字开头</p>
+</li>
+<li>
+<p>严格区分大小写（计算机编程里，一共52个英文字母，26大写+26小写）</p>
+</li>
+<li>
+<p>不能使用关键字（在python语言里有特殊含义的单词）作为变量名</p>
+</li>
+</ol>
+<h4 id="规范建议遵守遵守规范会显得专业并且代码易读"><strong>规范：建议遵守，遵守规范会显得专业，并且代码易读</strong></h4>
+<ol>
+<li>
+<p>做到顾名思义</p>
+</li>
+<li>
+<p>遵守一定的命名规范</p>
+<ol>
+<li>小驼峰命名法：第一个单词的首字母小写，以后每个单词的首字母都大写</li>
+<li>大驼峰命名法：每个单词的首字母都大写</li>
+<li>使用下划线连接</li>
+</ol>
+<p>在python里的变量、函数和模块名都使用下划线连接；</p>
+<p>python里的类名使用大驼峰命名法</p>
+</li>
+</ol>
+<h3 id="输出语句"><strong>输出语句</strong></h3>
+<p>####　print</p>
+<pre><code class="language-python">#输出
+a = 32
+b = 'hello'
+c = True 
+d = ['zjlun','zhansn']
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(3.14))
+</code></pre>
+<p>​	sep 参数用来表示输出时，每个值之间用哪种字符作为分隔。默认使用空格，修改方式如下</p>
+<pre><code class="language-python">我 = '张三'
+print(我)
+print('hello','good','yes','hi')
+print('hello','good','yes','hi',sep='+')
+</code></pre>
+<p>​	end 当执行完一个print语句以后，接下来要输出的字符。默认为\n表示换行，修改方式如下</p>
+<pre><code class="language-python">print('hello','good','yes','hi',end = '\t')
+print('hello','good','yes','hi',end = '————————————')
+print('hello','good','yes','hi')
+</code></pre>
+<h3 id="输入"><strong>输入</strong></h3>
+<h4 id="input">input</h4>
+<p>input()      ==&gt;    括号里写提示信息</p>
+<p>​	定义一个变量可以保存用户输入的内容，如下</p>
+<pre><code class="language-python">#输入
+
+input(&quot;请输入您的密码：&quot;)
+
+password = input(&quot;请输入您的密码：&quot;)
+print(password)
+</code></pre>
+<p>​	<em>注意：不管用户输入的是什么，变量保存保存的结果都是字符串</em></p>
+<h3 id="类型转换"><strong>类型转换</strong></h3>
+<p>将一个类型的数据转换为其他类型数据</p>
+<pre><code class="language-python">age = input('请输入您的年龄：')
+#print(age + 1)   error
+#原因：input 接收到的用户输入都是 str 字符串类型
+#在python里，如果字符串和数字做加法运算，会直接报错
+#把字符串类型的变量 age 转换成为数字类型的 age
+print(type(age))
+#使用 int 内置类可以将其他类型的数据转换为整数
+age = int(age) + 1
+print(type(age))
+#转换数据类型的原因：不同的数据类型进行运算时的运算规则是不一样的
+</code></pre>
+<pre><code class="language-python">#转化为整数
+a = '31'
+print(a) #输出31，但这个31是字符串类型
+#如果字符串不是合法的数字，将字符串转换成int会直接报错
+x = 'hello'
+y = int(x)
+print(y)
+
+x = '1a2c'
+y = int(x,16)#将字符串当做16进制数转换
+#只能包含A-F
+
+m = '12'
+n = int(m,8)
+print(n) # 10
+</code></pre>
+<pre><code class="language-python">#转化为浮点数
+a = '12.34'
+#使用内置float类可以将其他类型数据转换成为float浮点数
+b = float(a)
+print(b+1)
+
+c = 101
+print(float(c))
+
+print(float('12'))#将字符串转换成浮点数     12
+print(float(12))#将整型数字转换成浮点数     12
+</code></pre>
+<pre><code class="language-python">#转换成为字符串
+#使用 str 内置类可以将其他类型数据转换成为字符串
+a = 34
+b = str(a)
+print(a,b)# 34 34 前一个是int 后一个是字符串
+</code></pre>
+<h4 id="转换为布尔值"><strong>转换为布尔值</strong></h4>
+<pre><code class="language-python">#使用bool内置类可以将其他数据类型转换成布尔值
+print(bool(100))#将1数字100转换成布尔值    True
+print(bool(-1))#True
+print(bool(0))#False
+#数字非零都是True
+
+#字符串转布尔类型
+print(bool('hello'))# True
+print(bool('False'))#True
+print(bool(''))#False
+#空字符串 ''/&quot;&quot; 才能转换为False，其他字符串都是True
+
+#None空数据 转换为布尔值是 False
+print(bool(None))#False
+
+#[]空列表
+print(bool([]))#False
+
+#()空元组
+print(bool(()))#False
+
+#空集合
+s = set()
+print(bool)
+
+#在Python中，只有空字符串'',&quot;&quot;,数字0，空字典{},空列表[],空元组(),空数据None会被转换为False
+#其他的都会转换为True
+
+#在计算机里，True和False其实就是使用数字 1 和 0来保存的
+print(True + 1) # 2
+print(False + 1)# 1
+</code></pre>
+<h3 id="运算符"><strong>运算符</strong></h3>
+<pre><code class="language-python">#算术运算符在数字里的使用
+
+** 幂运算
+		**等价于^，例如2 * *10=1024
+   开平方：
+		print(81 ** (1/2))
+    **=
+    
+    
+// 整除
+print(10 /  3)	#3.333333333
+print(10 // 3)	#3
+	//=
+
+#除法
+#在Python 3里，两个整数相除，得到的结果会是浮点数	10/3——&gt;3.333333
+#在Python 2里，两个整数相除，得到的结果会是一个整数	10/3——&gt;3
+
+print(6/2) # 3.0
+print(9/2) # 4.5
+</code></pre>
+<pre><code class="language-python">#算术运算符在字符串里的使用
+#字符串里支持的算术运算符有限，只支持加法和乘法
+#加法运算符：只能用于两个字符串拼接，数字和字符串之间不能做加法运算
+#乘法运算符：只能用于数字和字符串之间，用来将一个字符串重复多次
+print('hello' * 2) #hellohello
+</code></pre>
+<pre><code class="language-python">m,n = 3,5	#拆包
+print(m,n)	# 3 5
+
+x = 'hello','good','yes'	#元组，（）可以省略
+print(x)	#('hello','good','yes')
+
+#拆包时，变量的个数和值的个数不一致会报错，不能多也不能少
+# y,z = 1,2,3,4,5	#有太多的值要解包了	error
+# print(y,z)
+#o,p,q = 4,2	#拆包的值不够	error
+#print(o,p,q)
+
+o,*p,q = 1,2,3,4,5,6		#	*p是可变长度，把1给o，6给q，[2,3,4,5]给p
+print(o,p,q)		# 1 [2,3,4,5] 6
+
+*o,p,q = 1,2,3,4,5,6	#	*o是可变长度，把6给q，5给p,[1,2,3,4]给o
+print(o,p,q)		# [1,2,3,4] 5 6
+o,p,*q = 1,2,3,4,5,6	# *q是可变长度，把1给o，2给p,[3,4,5,6]给q
+print(o,p,q)		# 1 2 [3,4,5,6]
+</code></pre>
+<pre><code class="language-python">#比较运算符
+#字符串之间使用比较运算符，会根据各个字符的ASCII码值逐一进行比较
+print('a'&gt;'b') #False
+print('abc'&gt;'b')#False		979899 &gt; 98  是97和98比较，这就是逐一比较的意思
+
+#数字和字符串之间，做 == 运算的结果是False，做！=运算的结果是True，不支持其他的比较运算
+print('a' == 90)#False
+print('a' != 97)#True
+print('a' &gt; 90)#error
+</code></pre>
+<pre><code class="language-python">#逻辑运算符
+    # 逻辑与 and	逻辑或 or	逻辑非 not
+    print(2 &gt;1 and 5 &gt; 3 and 10 &gt; 2)
+    #逻辑与运算做取值时，取第一个为False的值；如果所有的运算数都是True，取最后一个值
+    print('good' and 'yes' and 'ok' and 100)#100
+    #逻辑或运算做取值时，取第一个为True的值；如果所有的运算数都是False，取最后一个值
+    print(0 or [] or {} or ())#()
+</code></pre>
+<pre><code class="language-python">#位运算符与C语言相同
+</code></pre>
+<pre><code class="language-python">#运算符的优先级
+逻辑运算符的优先级：not &gt; and &gt;or 
+强烈建议：在开发中，使用括号来说明运算符的优先级
+</code></pre>
+<pre><code class="language-python">#python不支持switch……case语句
+——————————————————————————————————————————————————————————————————————————————
+
+#if结构：
+if 条件判断：
+	条件成立时执行的代码，前方有缩进
+    
+   
+例子：
+age = int(input(&quot;请输入你的年龄：&quot;))#注意：这里input得到的是字符串，不能和数字比较，
+									#需要类型转换
+if age &lt; 18:
+    print('未满18岁禁止入内')
+    
+——————————————————————————————————————————————————————————————————————————————
+#if……else结构
+if 条件判断：
+	条件成立时执行的代码
+else：
+	条件不成立时执行的代码
+#注意：if和else后面都要跟：冒号
+#		下方要执行的代码需要有缩进
+
+age = int(input(&quot;请输入你的年龄：&quot;))
+if age &lt; 18:
+    print('未满18岁禁止入内')
+else:
+    print('请进')
+——————————————————————————————————————————————————————————————————————————————
+score = int(input('请输入你的分数\n'))
+if 60 &gt; score &gt;= 0:
+    print('不及格')
+elif 80 &gt; score &gt;= 60:		#这里的 elif 是else if 的意思，但Python不支持写else if 
+    print('良好')
+elif 90 &gt; score &gt;= 80:
+    print('优秀')
+elif 100 &gt;= score &gt;=90:
+    print('真棒')
+else:
+    print('请输入正确的分数')
+—————————————————————————————————————————————————————————————————————————————— # Python语言里，使用强制缩进来表示语句间的结构 
+</code></pre>
+<pre><code class="language-python">#pass 关键字在Python里没有意义单纯的用来占位，保证语句的完整性
+例子：
+age = int(input('请输入您的年龄：'))
+if age &gt; 18:
+    pass			#这里pass用来占位，但这条语句没有含义，如果缺少了pass就会报错
+print('hello')
+</code></pre>
+<pre><code class="language-python">#三元表达式
+
+num1  = int(input('请输入一个数字：'))
+num2  = int(input('请再输入一个数字：'))
+
+x = num1 if num1 &gt; num2 else num2
+'''
+等价于
+if num1 &gt; num2:
+	x = num1
+else:
+	x = num2
+'''
+
+print('两个数里的较大数是',x)
+</code></pre>
+<h3 id="循环"><strong>循环</strong></h3>
+<pre><code class="language-python">python里不支持do……while循环
+python里也没有自增自减运算符
+
+#while循环
+x = 10
+while x &lt; 10:#注意这里也有：冒号
+    print('hello')
+    x++
+    
+#for···in 循环
+Python的for循环指的是for……in 循环
+#for……in循环格式：
+for x in [1,2,3,4,5,6,7,8,9]	#注意：in后面必须要是一个可迭代对象！！！
+#目前接触的  可迭代对象：字符串、列表、字典、元组、集合、range
+
+#range 内置类用来生成指定区间的整数序列（列表）
+#range 生成的是左开右闭区间
+for x in range(1,11):
+    print(x)#输出1-10
+等价于：for x in [1,2,3,4,5,6,7,8,9,10]:
+    print(x)
+
+用for……in循环打印1到100的和：
+for x in range(1,101):
+    z +=j
+print(z)    
+</code></pre>
+<h4 id="break和continue"><strong>break和continue</strong></h4>
+<pre><code class="language-python">#break和continue在Python里只能用于循环语句中
+
+#break用来结束整个循环
+
+#continue用来结束本轮循环，开启下一轮循环
+</code></pre>
+<h4 id="嵌套循环"><strong>嵌套循环</strong></h4>
+<p>外循环控制行数，内循环控制列数</p>
+<pre><code class="language-python">for……else
+for……else语句：当循环里break没有被执行的时候，就会执行else
+</code></pre>
+<h3 id="字符串"><em><strong>字符串</strong></em></h3>
+<h4 id="字符串的表示方式">字符串的表示方式</h4>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle mathcolor="red"><mrow><mi mathvariant="normal">字</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">串</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mi mathvariant="normal">类</mi><mi mathvariant="normal">型</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">于</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">串</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">任</mi><mi mathvariant="normal">何</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">都</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">会</mi><mi mathvariant="normal">改</mi><mi mathvariant="normal">变</mi><mi mathvariant="normal">原</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">字</mi><mi mathvariant="normal">符</mi><mi mathvariant="normal">串</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{red}{字符串是不可变数据类型，对于字符串的任何操作，都不会改变原有的字符串}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0em;vertical-align:0em;"></span><span class="mord" style="color:red;"><span class="mord cjk_fallback" style="color:red;">字</span><span class="mord cjk_fallback" style="color:red;">符</span><span class="mord cjk_fallback" style="color:red;">串</span><span class="mord cjk_fallback" style="color:red;">是</span><span class="mord cjk_fallback" style="color:red;">不</span><span class="mord cjk_fallback" style="color:red;">可</span><span class="mord cjk_fallback" style="color:red;">变</span><span class="mord cjk_fallback" style="color:red;">数</span><span class="mord cjk_fallback" style="color:red;">据</span><span class="mord cjk_fallback" style="color:red;">类</span><span class="mord cjk_fallback" style="color:red;">型</span><span class="mord cjk_fallback" style="color:red;">，</span><span class="mord cjk_fallback" style="color:red;">对</span><span class="mord cjk_fallback" style="color:red;">于</span><span class="mord cjk_fallback" style="color:red;">字</span><span class="mord cjk_fallback" style="color:red;">符</span><span class="mord cjk_fallback" style="color:red;">串</span><span class="mord cjk_fallback" style="color:red;">的</span><span class="mord cjk_fallback" style="color:red;">任</span><span class="mord cjk_fallback" style="color:red;">何</span><span class="mord cjk_fallback" style="color:red;">操</span><span class="mord cjk_fallback" style="color:red;">作</span><span class="mord cjk_fallback" style="color:red;">，</span><span class="mord cjk_fallback" style="color:red;">都</span><span class="mord cjk_fallback" style="color:red;">不</span><span class="mord cjk_fallback" style="color:red;">会</span><span class="mord cjk_fallback" style="color:red;">改</span><span class="mord cjk_fallback" style="color:red;">变</span><span class="mord cjk_fallback" style="color:red;">原</span><span class="mord cjk_fallback" style="color:red;">有</span><span class="mord cjk_fallback" style="color:red;">的</span><span class="mord cjk_fallback" style="color:red;">字</span><span class="mord cjk_fallback" style="color:red;">符</span><span class="mord cjk_fallback" style="color:red;">串</span></span></span></span></span></span></p>
+<pre><code class="language-python">#在python里，可以使用一对单引号、一对双引号、一对三个双引号、一对三个单引号都可以表示字符串
+#如果字符串里面还有双引号，外面就可以使用单引号
+
+#字符串的转义字符 \
+x = 'I\'m xiaoming'	# \ 表示的是转义字符，作用是对 \ 后面的字符进行转义
+——————————————————————————————————————————————————————————————————————————————
+#字符串的下标和切片
+
+# 下标我们又称之为索引，表示第几个数据
+str list tuple 可以通过下标来获取或操作数据
+下标都是从0开始的
+
+Word = ’zhangsan'
+print(word[4])
+#字符串是不可变数据类型，对于字符串的任何操作，都不会改变原有的字符串
+——————————————————————————————————————————————————————————————————————————————
+#切片
+#切片就是从字符串中复制一段指定的内容，生成一个新的字符串
+m = 'abcdefghijklmnopqrstuvwxyz'
+print(m[5])#m[index] ==&gt; 获取指定下标上的数据
+#切片语法   m[stard:end:step]
+#也是左闭右开区间
+#step指的是步长，理解为在指定区间内，每step个取一次
+
+print(m[2:9])#cdefghi  ==&gt;[2,9)
+print(m[2:])#如果只设置了start，后面默认到最后    cdefghijklmnopqrstuvwxyz
+print(m[:9])#如果只设置了end，会从头开始取值      abcdefghi
+#步长默认为1
+print(m[2:9:2])#步长为2，                         cegi
+#步长不能为0，但可以为负数
+print(m[3:15:-1])#打印的是空的，-1是从右往左找，从下标为3的地方往左找下标为15
+print(m[15:3:-1])#注意：这里包含15，不包含3         ponmlkjihgfe
+print(m[::])#从左往右全部复制一份
+print(m[::-1])#从右往左全部复制一份
+#stard和end为负数表示从右往左数
+print(m[-5:-9])#空
+print(m[-9:-5])#rstu    注意：这里步长为1是正数，从左往右取
+</code></pre>
+<h4 id="字符串的常见操作"><strong>字符串的常见操作</strong></h4>
+<pre><code class="language-python">x = 'abcdefghijklmnopqrstuvwxyz'
+
+#获取字符串的长度
+#使用内置类len
+print(len(x))#26
+
+#查找内容相关方法
+#find/index/rfind/rindex
+#可以获取指定字符的下标
+#s.find(sub[,start[,end]]) -&gt; int 返回的一定是一个int值
+print(x.find('l')) #11
+
+print(x.index('l')) #11
+
+#find和index的区别：
+print(x.find('P'))  #-1 如果字符在字符串里不存在，结果是-1
+print(x.index('P')) # ValueError: substring not found   字符在字符串里不存在会报错
+#使用find，如果字符在字符串里不存在，会返回-1
+#使用index，如果字符在字符串里不存在，会直接报错
+
+#find用法2：
+print(x.find('l',4,9))#在下标4到9的范围内寻找字符'l'
+
+'''
+s.find(sub[, start[, end]]) -&gt; int 
+Return the lowest index in S where substring sub is found, 
+such that sub is contained within s[ start: end]. Optional 
+arguments start and end are interpreted as in slice notation.
+ Return -1 on failure.
+ 
+s.find（sub [，start [，end]]）-&gt; int
+返回S中找到子字符串sub的最低索引，
+这样sub包含在s [start：end]中。可选的
+参数start和end被解释为切片表示法。
+失败时返回-1。
+'''
+#rfind和rindex都是找最大的下标，它们和find，index它们的区别与find和index的区别是一样的
+
+# startswith,endswith, isalpha,isdigit, isalnum, isspace
+# is开头的是判断，结果是一个布尔类型
+print('he1lo'.startswith('he')) #True   startswith  判断字符串是不是以括号里面的字符为开头
+print('hello'.endswith('o'))    #True   endswith    判断字符串是不是以括号里面的字符为结尾
+print('hello'.isalpha())# True  判断字符串是不是都字母     alpha字母
+print('123'.isdigit())#True     判断字符串是否都是正整数   digit数字
+#alnum判断字符串是否由正整数或字母组成
+print('ab123hello'.isalnum())#True
+print('123'.isalnum())#True
+print('abhello'.isalnum())#True
+print('4 - 1'.isalnum())#False
+print('    '.isspace())#True是否全部由空格组成
+'''
+
+计算出现次数：count
+返回 str 在start和end之间在mystr里面出现的次数
+语法格式：
+s.count(sub[,start[,end]]) -&gt; int
+示例：
+mystr = '今天天气好晴朗，处处好风光'
+print(mystr.count('好')) #3  '好'出现了三次
+'''
+
+&quot;&quot;&quot;
+#替换内容：replace
+替换字符串中指定的内容，如果指定次数count，则替换不会超过count次
+mystr ='今天天气好晴朗，处处好风光呀好风光'
+newstr = mystr.replace（'好','坏'）
+print(mystr)#今天天气好晴朗，处处好风光呀好风光  原字符串未改变！
+print(newstr)#今天天气坏晴朗，处处坏风光呀坏风光得到的新字符串里，'好'被修改成了'坏'
+
+newstr = mystr.replace（'好'，坏'，2）#指定了替换的次数
+print（newstr）#今天天气坏晴朗，处处坏风光呀好风光只有两处的‘好被替换成了‘坏
+&quot;&quot;&quot;
+#切割字符串split,rsplit,splitlines,partition,rpartition
+#字符串类型的数据
+x = 'zhangsan-lisi-wnagwu-jerry-henry-merry-jack-tony'
+#['zhangsan','lisi','wangwu','jerry','henry','merry','jack','tony']
+#使用split方法，可以将一个字符串切割成一个列表
+y = x.split('-')
+print(y)    #切割以后的结果就是一个列表['zhangsan','lisi','wangwu','jerry','henry','merry','jack','tony']
+#rsplit
+z = x.rsplit('-')#从右往左切
+print(z)#['zhangsan','lisi','wangwu','jerry','henry','merry','jack','tony']
+#print(x.split('-',2))的2是分割两次的意思，2控制分割次数，不写默认全部分割
+print(x.split('-',2))#['zhangsan', 'lisi', 'wnagwu-jerry-henry-merry-jack-tony']
+print(x.rsplit('-',2))#['zhangsan-lisi-wnagwu-jerry-henry-merry', 'jack', 'tony']
+
+#splitlines 按照行分隔，返回一个包含各行作为元素的列表
+#partition  指定一个字符串作为分隔符，分为3部分
+# 字符前面    字符   字符后面   
+
+print('acdefXmpXqwrst'.partition('X')) #('acdef', 'X', 'mpXqwrst')
+print('acdefXmpXqwrst'.rpartition('X')) #('acdefXmp', 'X', 'qwrst')
+
+#获取文件名和后缀名
+file_name = '不要打开.mp4'
+print(file_name.rpartition('.')) #('不要打开', '.', 'mp4')
+
+#修改大小写capitalize,title,upper,lower
+#空格处理ljust,rjust,center,lstrip,rstrip,strip
+#字符串拼接:join
+</code></pre>
+<h4 id="字符集">字符集</h4>
+<pre><code class="language-python">#字符集
+#ASCII--&gt;Latin 1--&gt;Unicode编码
+print(ord('a')) #97
+print(chr(65))  #A
+
+print(ord('你'))#20320
+print(ord('我'))#25105
+print(ord('爱'))#29233
+#这里是Unicode编码哦
+print(chr(25105),chr(29233),chr(20320))
+
+#编码集
+#GBK    国标扩     汉字占两个字节     简体中文    也就是GB2312
+#BIG5   繁体中文
+#utf-8  统一编码   汉字占三个字节
+
+#使用encode字符串转换成指定编码集结果
+print('你'.encode('gbk'))    #b'\xc4\xe3'        50403   11000100 11100011
+print('你'.encode('utf8'))   #b'\xe4\xbd\xa0'            11100100 10111101   10100000
+</code></pre>
+<p>成员运算符</p>
+<pre><code class="language-python">#in 和 not in    运算符
+#用来判断一个内容在可迭代对象里是否存在
+if x in word:
+    print('存在')
+else:
+    print('不存在')
+    
+#格式化打印字符串
+name = '张三'
+age = 18
+print('大家好，我的名字是%s,我今年%d岁了，我今天挣了%f元钱'%(name,age,3.14))
+#基本和C语言一样
+a = 255
+print('%x' % a) #ff
+</code></pre>
+<pre><code class="language-python">#字符串format
+#{}也可以进行占位
+#{}里面什么都不写，会直接读取后面的内容，一一对应填充
+x = '大家好，我是{}，我今年{}岁了'.format('张三',18)
+print(x)
+
+#{数字}根据数字的顺序来进行填入，数字从0开始
+y = '大家好，我是{1},我今年{0}岁了'.format(20,'jerry')
+print(y)
+
+#{变量名}
+z = '大家好，我是{name}，我今年{age}岁了,我来自{addr}'.format(age=18,name='jack',addr='瑞金')
+print(z)
+
+#混合使用{数字} {变量}                                  这里变量要写在数字之后
+a = '大家好，我是{name}，我今年{1}岁了,我来自{0}'.format('瑞金',18,name='Tom')
+print(a)
+ 
+#{}什么都不写    (数字)不能混合使用
+
+d = ['zhangsan',18,'上海',180]
+#b = '大家好，我是{},我今年{}岁了，我来自{},身高{}cm'.format(d[0],d[1],d[2],d[3])
+b = '大家好，我是{},我今年{}岁了，我来自{},身高{}cm'.format(*d)# *d可以直接对列表进行拆分
+print(b)
+
+info={'name':'cheis','age':23,'addr':'北京','height':190}
+c = '大家好，我是{name},我来自{addr},身高{height}cm,我今年{age}岁了'.format(**info)
+#这里用**
+print(c)
+</code></pre>
+<h4 id="列表的基本使用">列表的基本使用</h4>
+<pre><code class="language-python">#当我们有多个数据需要按照一定顺序保存时，我们可以考虑列表
+#name1 = '张三'
+#name2 = '李四'
+#name3 = '王五'
+#name4 = 'Jack'
+
+#使用[]来表示一个列表，列表里的每一个数据我们称之为元素
+#元素之间用逗号进行分割
+names = ['张三','李四','王五','Jack','张飞','关羽','刘备','曹操','孙权']
+print(names)
+
+#可以用 list(可迭代对象) 将可迭代对象转换成为一个列表
+names = list(('张三','李四','王五','Tony','张飞','关羽','刘备','曹操','孙权'))
+print(names)
+
+#和字符串一样，都可以使用下标来获取元素和对元素进行切片
+#同时，我们还可以使用下标来修改列表里的元素，但字符串不能修改，字符串是不可变数据类型
+#列表可以修改
+
+print(names[3])
+names[3] = '诸葛亮'
+print(names)
+
+print(names[3:5])#也是左闭右开区间
+
+#列表的操作
+
+#列表是用来保存多个数据的，是有序可变的
+#操作列表，一般都包含增加数据，删除数据，修改数据以及查询数据
+#增删改查
+
+heros = ['刘备','张飞','关羽','曹操','孙权','诸葛亮']
+
+#添加元素的方法    append insert extend
+heros.append('孙策')
+print(heros)#append 在列表的最后面追加一个数据
+
+#insert(index,object)   需要两个参数  index表示下标   object表示对象，具体插入到哪个数据前面
+heros.insert(4,'大乔')
+print(heros)
+
+x = ['周瑜','黄盖','司马懿']
+#exitend(interanle)需要一个可迭代对象
+#A.entend(B) ==&gt; 将可迭代对象B添加到A里
+
+heros.extend(x)
+
+print(heros)
+print(x)
+
+#列表的删除
+heros = ['刘备','张飞','关羽','曹操','孙权','诸葛亮','Jerry']
+#pop remove clear
+x = heros.pop()#pop默认删除列表最后一个数据，并且返回这个数据
+print(x)
+print(heros)
+x = heros.pop(3)#pop可以删除指定位置上的数据，也可以返回被删除的这个数据
+print(x)
+print(heros)
+
+#用来删除指定的元素
+heros.remove('张飞')#如果数据在列表中不存在会报错
+print(heros)
+
+#clear 用来清空一个列表
+heros.clear()
+print(heros)
+
+#查询列表元素
+三国 = ['魏','蜀','吴']
+print(三国.index('吴'))#查询元素的位置    如果元素不存在会报错
+print(三国.count('吴'))#查询出现的次数
+
+print('魏'in 三国)
+
+#列表的修改
+#使用下标可以直接修改列表里的元素
+三国[1] = 'shu'
+print(三国)
+
+#列表的遍历
+#遍历：将所有数据都访问一遍，遍历针对的是可迭代对象
+#while遍历    for...in遍历
+水浒传 = ['宋江','晁盖','吴用','林冲','公孙胜','卢俊义','呼延灼','柴进','鲁智深','武松','李逵','阮小五','阮小七','扈三娘','时迁','白胜','孙二娘']
+#for in 循环的本质就是不断调用迭代器的 next 方法查找下一个数据
+for k in 水浒传:
+    print(k)
+    
+i = 0
+while i &lt;   len(水浒传):
+    print(水浒传[i])
+    i += 1
+    
+#列表的排序和反转
+nums = [9,5,7,6,8,2,1,3,4,6]
+#调用列表的sort方法可以直接对列表进行排序
+#sort直接对原有的列表进行排序
+nums.sort()
+print(nums)
+#反转
+nums.sort(reverse = True)
+print(nums)
+
+#内置函数sorted
+#内置函数sorted不会改变原有的列表数据，而是会生成一个新的有序数据
+x = sorted(nums)
+print(nums)
+print(x)
+
+#reverse
+numes = ['zhangsan','lisi','wangwu']
+names.reverse()
+print(numes)
+
+print(numes[::-1])
+
+#可变数据类型和不可变数据类型
+num1 = [100,200,300]
+num2 = num1
+print('前num1=%X,num2=%X'%(id(num1),id(num2)))
+num1[0] = 1
+print(num1)
+print('后num1=%X,num2=%X'%(id(num1),id(num2)))
+
+'''
+python里的数据都是保存在内存里的
+python里的数据又分为可变类型和不可变类型
+不可变类型：字符串、数字、元组
+可变类型：   列表、字典、集合
+不可变数据类型如果修改值，内存地址会发生变化
+可变数据类型如果修改值，内存地址不会发生变化
+
+使用内置函数id可以获取到一个变量的内存地址
+'''
+a=12
+b=a
+print('前a=%X,b=%X'%(id(a),id(b)))
+a=10
+print('后a=%X,b=%X'%(id(a),id(b)))
+
+'''
+p80
+'''
+#列表的复制
+x = [100,200,300]
+y = x   #x和y指向了同一个内存空间，会相互影响
+x[0] = 1
+print(y)
+print(x)
+
+#调用列表的copy方法可以直接对列表进行复制,这个列表和原有列表内容一样，但指向不同的内存空间
+z = x.copy()
+print(z)
+
+print('%X %X %X' % (id(x),id(y),id(z)))
+
+#除了使用列表自带的copy方法以外，还可以使用copy模块实现拷贝
+
+import copy
+
+a = copy.copy(x)#效果等价于x.copy()，都是一个浅拷贝
+
+#深拷贝
+
+
+#切片就是一个浅拷贝
+names1 = ['张三','李四','王五','杰克马','汤姆','露西','莉莉']
+names2 = names1[::]
+names1[0] = 'jerry'
+print(names2)
+
+</code></pre>
+<p>注释</p>
+<p>#是单行注释</p>
+<p>'''多行注释</p>
+<p>三个单引号开始</p>
+<p>三个单引号结束</p>
+<p>中间写注释</p>
+<p>'''</p>
+<p>“”“</p>
+<p>三个双引号也是多行注释</p>
+<p>“”“</p>
+<p>交互式编程用exit()退出</p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5CHP%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200331204642682.png" alt="image-20200331204642682" loading="lazy"></figure>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://https://github.com/tang1201/Token.gothub.io.git/post/c-yu-yan-da-gang/">
+                  <h3 class="post-title">
+                    C语言大纲
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '4f7868b2fa925961fe61',
+        clientSecret: 'fbbe2e9fec8078f9fd3bcf8f661ab8dadae15852',
+        repo: 'Token.gothub.io',
+        owner: 'tang1201',
+        admin: ['tang1201'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
