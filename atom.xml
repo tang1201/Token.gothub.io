@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://https://github.com/tang1201/Token.gothub.io.git</id>
-    <title>Gridea</title>
-    <updated>2020-04-28T07:48:07.762Z</updated>
+    <title>tang1201blog</title>
+    <updated>2020-04-28T07:57:14.258Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://https://github.com/tang1201/Token.gothub.io.git"/>
     <link rel="self" href="https://https://github.com/tang1201/Token.gothub.io.git/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
+    <subtitle>分享也是一种学习</subtitle>
     <logo>https://https://github.com/tang1201/Token.gothub.io.git/images/avatar.png</logo>
     <icon>https://https://github.com/tang1201/Token.gothub.io.git/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, tang1201blog</rights>
     <entry>
         <title type="html"><![CDATA[C语言大纲]]></title>
         <id>https://https://github.com/tang1201/Token.gothub.io.git/post/c-yu-yan-da-gang/</id>
